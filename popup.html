@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pencarian Nomenklatur BMD & ASPAK</title>
+  <style>
+    body {
+      width: 650px;
+      font-family: Arial, sans-serif;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    h3 {
+      margin-top: 0;
+      color: #333;
+      font-size: 16px;
+    }
+    #status {
+      font-size: 11px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .result-container {
+      max-height: 350px;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+      position: sticky;
+      top: 0;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      z-index: 10;
+    }
+    .section-header {
+      background-color: #e9ecef;
+      font-weight: bold;
+      color: #495057;
+      text-align: center;
+    }
+    .no-result {
+      padding: 15px;
+      text-align: center;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <h3>Pencarian Nomenklatur BMD & ASPAK</h3>
+  <div id="status">Memuat data Excel...</div>
+
+  <input type="text" id="searchInput" placeholder="Ketik kata kunci (misal: USG, Tempat Tidur, dll)..." disabled>
+
+  <div class="result-container">
+    <table>
+      <thead>
+        <tr>
+          <th colspan="2" style="width: 50%; background-color: #28a745; text-align: center;">Aset Alkes (BMD)</th>
+          <th colspan="2" style="width: 50%; background-color: #17a2b8; text-align: center;">Nomenklatur (ASPAK)</th>
+        </tr>
+        <tr>
+          <th style="width: 20%;">Kode BMD</th>
+          <th style="width: 30%;">Nama BMD</th>
+          <th style="width: 20%;">Kode ASPAK</th>
+          <th style="width: 30%;">Nama ASPAK</th>
+        </tr>
+      </thead>
+      <tbody id="resultBody">
+        <tr>
+          <td colspan="4" class="no-result">Sedang menyiapkan database...</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="xlsx.full.min.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

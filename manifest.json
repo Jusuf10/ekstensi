@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Pencarian Barang & Alkes",
+  "version": "1.0",
+  "description": "Ekstensi pencarian data dari 2 file Excel.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "Aset_Alkes.xlsx",
+        "Nomenklatur Alat Kesehatan.xls"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
